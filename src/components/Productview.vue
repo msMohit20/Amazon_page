@@ -65,10 +65,8 @@ export default {
     },
 
     gotoproductpage(id) {
-      this.$router.push({
-        name: "About",
-        path: "/about",
-      });
+      // console.log(id);
+      this.$router.push("/about/" + id);
     },
   },
 };

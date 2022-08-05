@@ -3,10 +3,10 @@
     <div class="result">
       <router-link to="/">Back to Home</router-link>
     </div>
-    <!-- <div class="row">
+    <div class="row">
       <div class="col-md-6">
         <div class="image">
-          <img :src="product.image" alt="Image" height="200px" />
+          <img :src="product.images[0]" alt="Image" height="200px" />
         </div>
       </div>
       <div class="col-md-6">
@@ -19,20 +19,34 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
-<!-- <script>
+<script>
+import axios from "axios";
 export default {
+  props: ["id"],
   data() {
     return {
-      //   product: [],
-      id: "",
+      product: {},
     };
   },
+  created() {
+    console.log(this.id);
+    axios
+      .get("https://dummyjson.com/products/" + this.id)
+      .then((response) => {
+        console.log(response);
+        this.product = response.data;
+        console.log(this.product);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
 };
-</script> -->
+</script>
 
 <style scoped>
 .result {

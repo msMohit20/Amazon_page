@@ -14,6 +14,13 @@ const routes = [
     path: "/about",
     name: "About",
     component: () => import("../views/About.vue"),
+    children: [
+      {
+        path: ":id",
+        component: () => import("../components/ProductPage.vue"),
+        props: true,
+      },
+    ],
   },
 ];
 
