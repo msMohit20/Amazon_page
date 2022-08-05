@@ -27,7 +27,7 @@
         <img :src="product.images[0]" class="image" height="50px" />
         <div class="product-info">
           <h4 class="product-title">{{ product.title }}</h4>
-          <button class="product-price">${{ product.price }}</button>
+          <button class="product-price">Price : ${{ product.price }}</button>
           <!-- <div class="product-description">
         {{ product.description }}
       </div> -->
@@ -158,7 +158,7 @@ export default {
 }
 
 .product-price {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   background: #ffff00;
   border: none;
