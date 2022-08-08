@@ -174,13 +174,19 @@ export default {
 }
 
 .product-rating {
-  margin: 0px;
+  text-align: left;
+  margin-left: 30px;
   padding: 0px;
 }
 
 .product-info {
   flex-direction: column;
   font-size: 20px;
+}
+
+.product-title {
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 .product-price {

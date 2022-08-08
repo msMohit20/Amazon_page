@@ -89,10 +89,25 @@ export default {
   margin-left: 10px;
 }
 
+.product-rating {
+  margin: 0px;
+  padding: 0px;
+}
+
+.product-title {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
 .product-price {
   font-weight: bold;
   color: #b12704;
   /* background: #ffff00; */
   width: 100px;
+}
+
+.stock {
+  color: #00a65a;
+  font-size: 10px;
 }
 </style>
