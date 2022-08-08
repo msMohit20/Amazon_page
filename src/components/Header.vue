@@ -36,6 +36,8 @@ export default {
         .get("https://dummyjson.com/products/search?q=" + this.input)
         .then((response) => {
           console.log(response.data.products);
+          console.log(this.input);
+          this.$store.commit("setInput", this.input);
           this.$store.commit("setProducts", response.data.products);
           this.$router.push("/searchresults");
         })

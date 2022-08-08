@@ -4,6 +4,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    input: "",
     products: [],
   },
   mutations: {
@@ -12,11 +13,17 @@ export default new Vuex.Store({
       state.products = products;
       //   console.log(state.products);
     },
+    setInput(state, input) {
+      state.input = input;
+    },
   },
   actions: {},
   getters: {
     products(state) {
       return state.products;
+    },
+    input(state) {
+      return state.input;
     },
   },
 });

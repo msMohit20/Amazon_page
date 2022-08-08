@@ -1,7 +1,7 @@
 <template>
   <div class="searchresult">
     <p class="search_result">
-      1 of {{ products.length }} found for the category
+      1 of {{ products.length }} found for {{ input }}
     </p>
     <div class="row">
       <div class="column">
@@ -39,6 +39,9 @@ export default {
     return {};
   },
   computed: {
+    input() {
+      return this.$store.state.input;
+    },
     products() {
       return this.$store.getters["products"];
     },
@@ -81,8 +84,8 @@ export default {
 }
 
 .image {
-  height: 300px;
-  width: 400px;
+  height: 150px;
+  width: 200px;
 }
 
 .product-info {
