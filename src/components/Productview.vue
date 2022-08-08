@@ -26,13 +26,13 @@
       >
         <img :src="product.images[0]" class="image" height="50px" />
         <div class="product-info">
-          <h4 class="product-title">{{ product.title }}</h4>
+          <p class="product-title">{{ product.title }}</p>
           <p class="product-rating">
             {{ product.rating }}
             <span class="fa fa-star checked"></span>/ 5
           </p>
           <h5 class="product-price">
-            ${{ product.price }}
+            ${{ product.price }}.00
             <p v-if="!check_stock" class="stock">
               In stock - {{ product.stock }}
             </p>
@@ -99,6 +99,8 @@ export default {
 .stock {
   color: #00a65a;
   font-size: 10px;
+  margin: 0;
+  padding-right: 20px;
 }
 
 .checked {
@@ -154,7 +156,7 @@ export default {
   width: 270px;
   margin: 10px;
   background: rgb(255, 255, 255);
-  height: 350px;
+  height: 300px;
 }
 
 .card:hover {
@@ -175,21 +177,26 @@ export default {
 
 .product-rating {
   text-align: left;
-  margin-left: 30px;
+  margin-left: 10px;
   padding: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .product-info {
-  flex-direction: column;
   font-size: 20px;
 }
 
 .product-title {
   font-size: 20px;
   text-transform: capitalize;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .product-price {
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
   color: #b12704;
