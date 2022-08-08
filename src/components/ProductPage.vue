@@ -1,7 +1,9 @@
 <template>
   <div class="page">
     <div class="result">
-      <router-link to="/"> Back to Home</router-link>
+      <router-link to="/">
+        <span class="fa fa-angle-left"> Back to Home</span></router-link
+      >
     </div>
     <div class="row">
       <div class="Image1">
@@ -48,13 +50,13 @@ export default {
     };
   },
   created() {
-    console.log(this.id);
+    // console.log(this.id);
     axios
       .get("https://dummyjson.com/products/" + this.id)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.product = response.data;
-        console.log(this.product);
+        // console.log(this.product);
       })
       .catch((error) => {
         console.log(error);
@@ -87,7 +89,7 @@ export default {
 }
 
 .data {
-  width: 60%;
+  /* width: 60%; */
   align-content: left;
   text-align: left;
 }

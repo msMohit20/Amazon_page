@@ -12,38 +12,39 @@
         placeholder="Search Products Here..."
         class="search"
       />
-      <button class="btn">
+      <button class="btn" @click="searchQuery">
         <i class="material-icons"> search</i>
       </button>
     </div>
     <div class="cart">
-      <i class="material-icons"> shop</i>
+      <button><i class="material-icons"> shop</i></button>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       input: "",
     };
   },
-  // methods: {
-  //     search() {
-  //     this.$router.push({
-  //         name: "search",
-  //         params: {
-  //         query: this.input,
-  //         },
-  //     });
-  //     },
-  // },
-  // mounted() {
-  //     this.$nextTick(() => {
-  //     this.$refs.search.focus();
-  //     });
-  // },
+  methods: {
+    searchQuery() {
+      axios
+        .get("https://dummyjson.com/products/search?q=" + this.input)
+        .then((response) => {
+          console.log(response.data.products);
+          this.$store.commit("setProducts", response.data.products);
+          this.$router.push("/searchresults");
+        })
+
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
 

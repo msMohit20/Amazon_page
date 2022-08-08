@@ -14,7 +14,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
           exercitationem aperiam natus blanditiis!
         </p>
-        <button @click="gotohome()" class="salebutton">GO Sale</button>
+        <button @click="gotohome()" class="salebutton">Go Sale</button>
       </div>
     </div>
     <div class="product">
@@ -154,7 +154,7 @@ export default {
   width: 270px;
   margin: 10px;
   background: rgb(255, 255, 255);
-  height: 400px;
+  height: 350px;
 }
 
 .card:hover {
@@ -175,6 +175,7 @@ export default {
 
 .product-rating {
   margin: 0px;
+  padding: 0px;
 }
 
 .product-info {

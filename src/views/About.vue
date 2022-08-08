@@ -5,11 +5,5 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      id: "",
-    };
-  },
-};
+export default {};
 </script>
