@@ -1,8 +1,8 @@
 <template>
   <div class="searchresult">
-    <!-- <p>
-      <span class="fa fa-angle-left"> {{ result }} </span>
-    </p> -->
+    <p class="search_result">
+      1 of {{ products.length }} found for the category
+    </p>
     <div class="row">
       <div class="column">
         <div
@@ -42,6 +42,13 @@ export default {
     products() {
       return this.$store.getters["products"];
     },
+    check_stock() {
+      if (this.products.stock > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   methods: {
     gotoproductpage(id) {
@@ -52,45 +59,40 @@ export default {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
+.search_result {
+  font-size: 15px;
+  color: #000;
+  margin: 0px;
+  text-align: left;
+  padding-left: 10px;
+  background: whitesmoke;
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.column {
-  float: left;
-  width: 100%;
-  padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+.checked {
+  color: orange;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: left;
-  background-color: #f1f1f1;
   display: flex;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 .image {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 200px;
+  height: 300px;
+  width: 300px;
+}
+
+.product-info {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #b12704;
+  /* background: #ffff00; */
+  width: 100px;
 }
 </style>
