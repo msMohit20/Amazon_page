@@ -6,16 +6,31 @@
     <div class="row">
       <div class="Image1">
         <div class="image">
-          <img :src="product.images[0]" alt="Image" height="300px" />
+          <img
+            :src="product.images[0]"
+            alt="Image"
+            class="Image"
+            height="400px"
+            width="600px"
+          />
         </div>
       </div>
       <div class="data">
         <div class="product-info">
-          <h4 class="product-title">{{ product.title }}</h4>
-          <p class="product-rating">Rating : {{ product.rating }} / 5</p>
-          <button class="product-price">Price :${{ product.price }}</button>
+          <div class="product-title">{{ product.title }}</div>
+          <p class="product-rating">
+            {{ product.rating }}
+            <span class="fa fa-star checked"></span>/ 5 -
+            <span class="fa fa-check">people's choice</span>
+          </p>
+          <div class="product-price">${{ product.price }}.00</div>
+          <div class="heading">About Item</div>
           <div class="product-description">
-            {{ product.description }}
+            <ul>
+              <li>
+                {{ product.description }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -49,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+.checked {
+  color: orange;
+}
 .result {
   text-align: left;
   background: whitesmoke;
@@ -64,6 +82,10 @@ export default {
   justify-content: space-evenly;
 }
 
+.fa-check {
+  color: green;
+}
+
 .data {
   width: 60%;
   align-content: left;
@@ -73,14 +95,34 @@ export default {
 .product-title {
   font-size: 20px;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 50px;
 }
 
 .product-rating,
 .product-price,
-.product-description {
+.product-description,
+.heading {
   margin-bottom: 10px;
-  /* padding-left: 10px; */
-  margin-left: 5px;
+  margin-left: 50px;
+}
+ul {
+  list-style-position: outside;
+}
+
+.product-price {
+  color: #b12704;
+}
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-title {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.product-description {
+  height: 150px;
 }
 </style>

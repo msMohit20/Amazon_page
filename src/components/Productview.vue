@@ -27,10 +27,16 @@
         <img :src="product.images[0]" class="image" height="50px" />
         <div class="product-info">
           <h4 class="product-title">{{ product.title }}</h4>
-          <button class="product-price">Price : ${{ product.price }}</button>
-          <!-- <div class="product-description">
-        {{ product.description }}
-      </div> -->
+          <p class="product-rating">
+            {{ product.rating }}
+            <span class="fa fa-star checked"></span>/ 5
+          </p>
+          <h5 class="product-price">
+            ${{ product.price }}
+            <p v-if="!check_stock" class="stock">
+              In stock - {{ product.stock }}
+            </p>
+          </h5>
         </div>
       </div>
     </div>
@@ -57,6 +63,16 @@ export default {
         console.log(error);
       });
   },
+  computed: {
+    check_stock() {
+      if (this.products.stock > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+
   methods: {
     gotohome() {
       this.$router.push({
@@ -78,6 +94,15 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+}
+
+.stock {
+  color: #00a65a;
+  font-size: 10px;
+}
+
+.checked {
+  color: orange;
 }
 
 @keyframes color {
@@ -111,7 +136,7 @@ export default {
 
 .data {
   padding-left: 10px;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 .salebutton {
@@ -126,10 +151,10 @@ export default {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 250px;
+  width: 270px;
   margin: 10px;
-  background: rgb(231, 255, 239);
-  height: 300px;
+  background: rgb(255, 255, 255);
+  height: 400px;
 }
 
 .card:hover {
@@ -148,20 +173,20 @@ export default {
   margin-top: 20px;
 }
 
+.product-rating {
+  margin: 0px;
+}
+
 .product-info {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
   font-size: 20px;
 }
 
 .product-price {
   font-size: 20px;
   font-weight: bold;
-  background: #ffff00;
-  border: none;
-  border-radius: 10px;
+  color: #b12704;
+  /* background: #ffff00; */
+  width: 100px;
 }
 </style>

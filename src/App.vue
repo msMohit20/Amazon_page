@@ -24,7 +24,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: linear-gradient(to top, #ffe5e5, rgb(237, 228, 255));
+  background: whitesmoke;
   height: 100%;
 }
 body {
