@@ -196,6 +196,8 @@ export default {
 }
 
 .product-price {
+  text-align: left;
+  margin-left: 10px;
   margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
