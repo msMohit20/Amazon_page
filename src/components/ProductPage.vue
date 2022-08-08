@@ -34,6 +34,23 @@
               </li>
             </ul>
           </div>
+          <table class="features">
+            <tr class="category">
+              <th>Brand</th>
+              <td>{{ product.brand }}</td>
+            </tr>
+            <tr class="category">
+              <th>Category</th>
+              <td>{{ product.category }}</td>
+            </tr>
+            <tr class="category">
+              <th>discount Percentage on product</th>
+              <td>{{ product.discountPercentage }}</td>
+            </tr>
+          </table>
+          <div class="product-actions">
+            <button class="btn">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
@@ -94,6 +111,15 @@ export default {
   text-align: left;
 }
 
+.btn {
+  border: none;
+  height: 30px;
+  width: 100px;
+  margin-left: 60px;
+  color: #fff;
+  background: orange;
+}
+
 .product-title {
   font-size: 20px;
   font-weight: bold;
@@ -124,7 +150,16 @@ ul {
   text-transform: capitalize;
 }
 
-.product-description {
-  height: 150px;
+.features {
+  border: 1px solid #000;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid #000;
 }
 </style>

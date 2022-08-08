@@ -77,11 +77,12 @@ export default {
   border-radius: 5px;
   padding: 20px;
   border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
 }
 
 .image {
   height: 300px;
-  width: 300px;
+  width: 400px;
 }
 
 .product-info {
@@ -91,12 +92,13 @@ export default {
 
 .product-rating {
   margin: 0px;
-  padding: 0px;
+  padding-top: 10px;
 }
 
 .product-title {
   font-size: 20px;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .product-price {
@@ -104,6 +106,9 @@ export default {
   color: #b12704;
   /* background: #ffff00; */
   width: 100px;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .stock {
