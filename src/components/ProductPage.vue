@@ -9,7 +9,7 @@
       <div class="Image1">
         <div class="image">
           <img
-            :src="product.images[0]"
+            :src="product.thumbnail"
             alt="Image"
             class="Image"
             height="400px"
@@ -49,7 +49,7 @@
             </tr>
           </table>
           <div class="product-actions">
-            <button class="btn">Add to Cart</button>
+            <button class="btn" @click="gotocart">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -78,6 +78,14 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  methods: {
+    gotocart() {
+      this.$store.commit("addToCart", this.product);
+      this.$router.push({
+        name: "Cart",
+      });
+    },
   },
 };
 </script>

@@ -6,8 +6,13 @@ export default new Vuex.Store({
   state: {
     input: "",
     products: [],
+    cart: [],
   },
   mutations: {
+    addToCart(state, product) {
+      state.cart.push(product);
+      // console.log(state.cart);
+    },
     setProducts(state, products) {
       //   console.log(products);
       state.products = products;
@@ -24,6 +29,9 @@ export default new Vuex.Store({
     },
     input(state) {
       return state.input;
+    },
+    cartpage(state) {
+      return state.cart;
     },
   },
 });

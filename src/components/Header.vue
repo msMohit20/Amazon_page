@@ -16,9 +16,9 @@
         <i class="material-icons"> search</i>
       </button>
     </div>
-    <div class="cart">
+    <router-link to="/cart" class="cart">
       <button><i class="material-icons"> shop</i></button>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -84,13 +84,13 @@ export default {
   background: orange;
   padding-bottom: 15px;
   border: none;
-  size: 20px;
+  /* size: 20px; */
   border-radius: 5px;
   height: 35px;
 }
 
 .cart {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-right: 15px;
   color: #fff;
   font-size: 20px;
