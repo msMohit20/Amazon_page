@@ -24,8 +24,9 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 "# Amazon_page" 
 
-### Screenshot of Program
+### Screenshot
 ```
+Screenshot od the program while running in browser.
 ```
 # Home
 ![Screenshot 2022-09-29 132136](https://user-images.githubusercontent.com/69730742/192979506-6a50d099-1161-4efb-9749-b01f533444be.jpg)
