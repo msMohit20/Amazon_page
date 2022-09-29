@@ -29,10 +29,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Screenshot od the program while running in browser.
 ```
 # Home
-![Screenshot 2022-09-29 132136](https://user-images.githubusercontent.com/69730742/192979506-6a50d099-1161-4efb-9749-b01f533444be.jpg)
-# Scroll Down
-![Screenshot 2022-09-29 132206](https://user-images.githubusercontent.com/69730742/192979607-0d0a217f-86bc-49d6-b3f5-ff5094de6737.jpg)
-# Product page
-![Screenshot 2022-09-29 132236](https://user-images.githubusercontent.com/69730742/192979624-a7d4a08c-f29c-476b-8cd9-786f7d741186.jpg)
-# cart Page
-![Screenshot 2022-09-29 140339](https://user-images.githubusercontent.com/69730742/192982303-8e19e7e1-4da0-4f44-bb81-896df5df9981.jpg)
+![Screenshot1](https://user-images.githubusercontent.com/69730742/192983300-d1654324-6c71-4091-aa73-30df9a3a646d.jpg)
+# Scrolldown
+![Screenshot2](https://user-images.githubusercontent.com/69730742/192983606-43da395b-e286-458c-bb67-f0ec0858c2b7.jpg)
+# Product Page
+![Screenshot3](https://user-images.githubusercontent.com/69730742/192983560-f28f2079-6b96-4ecc-ba74-7e19aed16b66.jpg)
+# Cart 
+![Screenshot4](https://user-images.githubusercontent.com/69730742/192983671-e2b73439-115f-47bf-8cdd-c546e155c8aa.jpg)
